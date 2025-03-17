@@ -10,20 +10,18 @@ class FeaturesTableSeeder extends Seeder
     public function run()
     {
         $features = [
-            ['name' => 'Model', 'description' => 'Defines the data structure and interacts with the database.'],
+            ['name' => 'Model', 'description' => 'Represents database tables as PHP classes in Laravel.'],
             ['name' => 'View', 'description' => 'Handles the UI and presentation logic using Blade templates.'],
-            ['name' => 'Controller', 'description' => 'Manages application logic and interactions.'],
-            ['name' => 'Routes', 'description' => 'Defines URL endpoints and their associated controllers or actions.'],
-            ['name' => 'Middleware', 'description' => 'Filters HTTP requests, such as authentication and logging.'],
-            ['name' => 'Blade Templates', 'description' => 'Laravel’s templating engine for rendering dynamic views.'],
-            ['name' => 'Migrations', 'description' => 'Handles database schema changes like creating or updating tables.'],
-            ['name' => 'Seeders', 'description' => 'Fills the database with sample or default data for testing or development.'],
-            ['name' => 'Database', 'description' => 'Stores and manages structured data using Laravel’s database features.'],
-            ['name' => 'Eloquent ORM', 'description' => 'Provides an Active Record implementation for database interactions.'],
+            ['name' => 'Controller', 'description' => 'Acts as the controller or middleman of Model and View'],
+            ['name' => 'Routes', 'description' => 'Defines URLs and their corresponding controllers.'],
+            ['name' => 'Middleware', 'description' => 'Handles HTTP requests filtering like authentication.'],
+            ['name' => 'Blade Templates', 'description' => 'A powerful templating engine for views.'],
+            ['name' => 'Migrations', 'description' => 'Manages database schema changes.'],
+            ['name' => 'Seeders', 'description' => 'Populates the database with sample data.'],
+            ['name' => 'Database', 'description' => 'Handles database connections.'],
+            ['name' => 'Eloquent ORM', 'description' => 'Provides an Active Record implementation for databases.'],
         ];
 
-        foreach ($features as $feature) {
-            Feature::create($feature);
-        }
+        Feature::insert($features);
     }
 }

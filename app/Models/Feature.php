@@ -10,8 +10,5 @@ class Feature extends Model
     use HasFactory;
 
     protected $table = 'tb_features'; 
-
     protected $fillable = ['name', 'description'];
 }
-
-                    

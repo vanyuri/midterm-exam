@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'My Laravel App')</title>
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <title>@yield('title', 'My Laravel Features')</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
-<body>
-    <header>
+<body class="container mt-4">
+    <header class="text-center">
         <h1>My Laravel App</h1>
     </header>
 
@@ -15,8 +15,6 @@
         @yield('content')
     </main>
 
-    <footer>
-        <p>&copy; {{ date('Y') }} My Laravel App</p>
-    </footer>
+   
 </body>
 </html>

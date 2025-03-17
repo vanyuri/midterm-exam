@@ -1,11 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
 use App\Http\Controllers\FeatureController;
 
-Route::get('/features', [FeatureController::class, 'index'])->name('features.index');
+Route::get('/UychocdeVanYuri', [FeatureController::class, 'index'])->name('features.index');
